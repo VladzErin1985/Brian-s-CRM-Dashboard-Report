@@ -21,7 +21,7 @@ export type SystemCard = {
 export const overviewStats: { label: string; value: string }[] = [
   { label: 'Business Pipelines', value: '6' },
   { label: 'Custom Data Panels', value: '3' },
-  { label: 'Automations Built', value: '2' },
+  { label: 'Automations Live', value: '2' },
   { label: 'Core System', value: 'Momentum AMS' },
 ]
 
@@ -174,8 +174,8 @@ export const systemCards: SystemCard[] = [
         summary: 'Fires when a new prospect enters the system',
         items: [
           { label: 'Trigger', detail: 'Fires the moment a new Prospect record is created.' },
-          { label: 'Welcome Email', status: 'draft', detail: 'A personalized acknowledgment email confirming we’ve received their information and someone will follow up shortly.' },
-          { label: 'Follow-Up Task', status: 'pending', detail: 'A task for the assigned agent to personally follow up — still being finished.' },
+          { label: 'Welcome Email', status: 'live', detail: 'A personalized acknowledgment email confirming we’ve received their information and someone will follow up shortly.' },
+          { label: 'Follow-Up Task', status: 'live', detail: 'A task is automatically created for the assigned team member to personally follow up.' },
         ],
       },
       {
@@ -183,8 +183,8 @@ export const systemCards: SystemCard[] = [
         summary: 'Fires when a prospect reaches Initial Contact',
         items: [
           { label: 'Trigger', detail: 'Fires when a prospect’s opportunity reaches the Initial Contact stage of the pipeline.' },
-          { label: 'Follow-Up Email', status: 'draft', detail: 'A warmer follow-up referencing the conversation, letting them know options are being prepared.' },
-          { label: 'Follow-Up Task', status: 'pending', detail: 'A task for the assigned agent — still being finished.' },
+          { label: 'Follow-Up Email', status: 'live', detail: 'A warmer follow-up referencing the conversation, letting them know options are being prepared.' },
+          { label: 'Follow-Up Task', status: 'live', detail: 'A task is automatically created for the assigned team member.' },
         ],
       },
     ],
@@ -220,11 +220,10 @@ export const systemCards: SystemCard[] = [
     lanes: [
       {
         name: 'Open Items',
-        summary: 'Outstanding before the automations can be turned on',
+        summary: 'Both automations above are now live — here’s what’s still open',
         items: [
-          { label: 'Task touchpoints', status: 'pending', detail: 'Both automations above need their task-creation step finished — requires a Work Group to be set up first.' },
           { label: 'Stage review', status: 'pending', detail: 'A few pipeline stages found outside the main flow need a quick decision from you — keep, merge, or clean up.' },
-          { label: 'Testing', status: 'pending', detail: 'Both automations will be test-fired end to end before going live.' },
+          { label: 'Monitoring first real runs', status: 'pending', detail: 'Both automations are turned on and being watched to confirm they fire correctly on real prospects before we move to the next round of automations.' },
         ],
       },
     ],
