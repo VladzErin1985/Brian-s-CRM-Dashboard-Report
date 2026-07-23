@@ -187,6 +187,18 @@ export const systemCards: SystemCard[] = [
           { label: 'Follow-Up Task', status: 'live', detail: 'A task is automatically created for the assigned team member.' },
         ],
       },
+      {
+        name: 'Quoted — Follow-Up Sequence',
+        summary: 'Fires when a prospect’s options come back from carriers',
+        items: [
+          { label: 'Trigger', detail: 'Fires when a prospect’s opportunity reaches the Quotes Received stage of the pipeline.' },
+          { label: 'Day 1 — Your Options Are Ready', status: 'draft', detail: 'Lets them know their options are ready to review and compare.' },
+          { label: 'Day 3 — What Actually Matters', status: 'draft', detail: 'Helps them understand what to actually weigh beyond price alone.' },
+          { label: 'Day 6 — Coverage vs. Price', status: 'draft', detail: 'Addresses the natural hesitation between the lower-cost option and full coverage.' },
+          { label: 'Day 10 — Gentle Reminder', status: 'draft', detail: 'A friendly nudge that quotes don’t stay valid indefinitely.' },
+          { label: 'Day 14 — Final Check-In', status: 'pending', detail: 'A last, low-pressure touch — still being finished.' },
+        ],
+      },
     ],
   },
   {
