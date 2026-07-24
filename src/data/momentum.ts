@@ -368,18 +368,26 @@ export const systemCards: SystemCard[] = [
     icon: 'message-square',
     lanes: [
       {
-        name: 'Calls — Working Today',
-        summary: 'Lightspeed Voice handles this already',
+        name: 'Lightspeed Voice — Working Well for Calls',
+        summary: 'Confirmed working today, no changes needed',
         items: [
           { label: 'Call Logging', status: 'live', detail: 'Calls are automatically transcribed and logged to the client record — nothing further needed here.' },
         ],
       },
       {
-        name: 'Texting — On Hold',
-        summary: 'The one real blocker in this whole plan',
+        name: 'The Gap — Lightspeed Can’t Do Automated Texting',
+        summary: 'A platform limitation, confirmed directly with Momentum — not specific to your account or something Lightspeed did wrong',
         items: [
-          { label: 'Automated Texting', status: 'blocked', detail: 'Momentum’s automation engine cannot send texts through Lightspeed directly — this is a platform limitation, not something specific to your account. It requires connecting a second tool (Twilio) as the sending line, with the actual text templates and logic still built and managed inside Momentum.' },
-          { label: 'Setup In Progress', status: 'pending', detail: 'A Twilio account request has been submitted. Once approved, a required registration step for US business texting typically takes a few weeks before real messages can go out.' },
+          { label: 'Why Texting Doesn’t Work Through Lightspeed', status: 'blocked', detail: 'Momentum’s automation engine simply cannot send texts through Lightspeed — confirmed directly by Momentum’s own team. Lightspeed remains the right tool for calls; it was never built to handle Momentum-triggered texting, regardless of how it was positioned during onboarding.' },
+          { label: 'Why Twilio, Specifically', status: 'blocked', detail: 'Twilio is the tool Momentum itself recommends to close this exact gap — it becomes the sending line for automated texts, while every template and trigger still gets built and managed inside Momentum, same as everything else on this dashboard. Lightspeed keeps handling calls; Twilio only handles the piece Lightspeed can’t.' },
+        ],
+      },
+      {
+        name: 'Twilio Setup — In Progress',
+        summary: 'Where this stands right now',
+        items: [
+          { label: 'Account Request Submitted', status: 'pending', detail: 'Waiting on approval before the next step can start.' },
+          { label: 'Carrier Registration Next', status: 'pending', detail: 'Once approved, a required registration step for US business texting typically takes a few weeks before real messages can go out — this is a carrier requirement, not something we control the timeline on.' },
         ],
       },
       {
