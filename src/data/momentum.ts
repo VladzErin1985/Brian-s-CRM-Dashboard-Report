@@ -122,11 +122,15 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Renewal',
-        summary: 'Tracks existing policies as they approach renewal',
+        summary: '8 stages, tracking existing policies as they approach renewal',
         items: [
           { label: 'Annual Policy Review', detail: 'Scheduled yearly check-in on the policy.' },
+          { label: 'Carrier Download Received', detail: 'The renewal information has come back from the carrier.' },
+          { label: 'Remarketing', detail: 'Shopping the renewal across carriers if it needs a second look.' },
+          { label: 'Renewal Upcoming', detail: 'The renewal date is approaching.' },
           { label: 'Renewal Below %', detail: 'Renewal premium came in below the expected threshold.' },
           { label: 'Renewal Above %', detail: 'Renewal premium came in above the expected threshold — worth a closer look.' },
+          { label: 'Renewed', detail: 'The renewal has been confirmed with the client.' },
           { label: 'Complete / Auto-Renewal', detail: 'The renewal has gone through.' },
         ],
       },
@@ -352,10 +356,11 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Phase 6 — Long-Term Vision',
-        summary: 'From your own stated goals, further out',
+        summary: 'From your own stated goals, further out — one item below needs your input',
         items: [
           { label: 'Claims Pipeline Automation', status: 'pending', detail: 'Automating the 7-stage claims process.' },
-          { label: 'Expanded Pipelines', status: 'pending', detail: 'Marketing, a dedicated Referral Partner Pipeline, and Commercial Risk Management.' },
+          { label: 'Referral Partner Pipeline — Needs Your Review', status: 'pending', detail: 'Worth flagging directly: you told us this is one of your highest priorities, but your written plan places it here, in the long-term phase. We followed the written plan for this draft, but wanted to check with you directly — should this move up into an earlier phase, or has the priority shifted since you wrote that? Let us know either way.' },
+          { label: 'Marketing & Commercial Risk Management Pipelines', status: 'pending', detail: 'The remaining two pipelines from your long-term vision.' },
           { label: 'Marketing Content Support', status: 'pending', detail: 'Getting your marketing assistant fully set up to create branded video content at scale.' },
         ],
       },
