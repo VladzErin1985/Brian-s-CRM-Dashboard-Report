@@ -26,7 +26,7 @@ export type FlowStep = {
 export const overviewStats: { label: string; value: string }[] = [
   { label: 'Business Pipelines', value: '6' },
   { label: 'Custom Data Panels', value: '3' },
-  { label: 'Automations Live', value: '2' },
+  { label: 'Automations Live', value: '3' },
   { label: 'Core System', value: 'Momentum AMS' },
 ]
 
@@ -261,11 +261,20 @@ export const systemCards: SystemCard[] = [
         summary: 'Fires when a prospect’s options come back from carriers',
         items: [
           { label: 'Trigger', detail: 'Fires when a prospect’s opportunity reaches the Quotes Received stage of the pipeline.' },
-          { label: 'Day 1 — Your Options Are Ready', status: 'draft', detail: 'Lets them know their options are ready to review and compare.' },
-          { label: 'Day 3 — What Actually Matters', status: 'draft', detail: 'Helps them understand what to actually weigh beyond price alone.' },
-          { label: 'Day 6 — Coverage vs. Price', status: 'draft', detail: 'Addresses the natural hesitation between the lower-cost option and full coverage.' },
-          { label: 'Day 10 — Gentle Reminder', status: 'draft', detail: 'A friendly nudge that quotes don’t stay valid indefinitely.' },
-          { label: 'Day 14 — Final Check-In', status: 'pending', detail: 'A last, low-pressure touch — still being finished.' },
+          { label: 'Day 1 — Your Options Are Ready', status: 'live', detail: 'Lets them know their options are ready to review and compare.' },
+          { label: 'Day 3 — What Actually Matters', status: 'live', detail: 'Helps them understand what to actually weigh beyond price alone.' },
+          { label: 'Day 6 — Coverage vs. Price', status: 'live', detail: 'Addresses the natural hesitation between the lower-cost option and full coverage.' },
+          { label: 'Day 10 — Gentle Reminder', status: 'live', detail: 'A friendly nudge that quotes don’t stay valid indefinitely.' },
+          { label: 'Day 14 — Final Check-In', status: 'live', detail: 'A last, low-pressure final touch, letting them know there’s no obligation either way.' },
+        ],
+      },
+      {
+        name: 'Annual Review — Cross-Sell',
+        summary: 'Fires once a year, on each policy’s own anniversary',
+        items: [
+          { label: 'Trigger', detail: 'Fires automatically 365 days after a policy’s effective date — repeats every year on that policy’s own anniversary.' },
+          { label: 'Coverage Check Email', status: 'draft', detail: 'A soft, personal note checking that the client’s full coverage picture is up to date — framed as a review, not a sales pitch.' },
+          { label: 'Review Task', status: 'pending', detail: 'An internal task for the team to actually review the account and confirm it’s been checked — still being finished.' },
         ],
       },
     ],
@@ -289,6 +298,7 @@ export const systemCards: SystemCard[] = [
         summary: 'Spot-checked live prospect/opportunity data against the pipeline',
         items: [
           { label: 'One prospect’s opportunities found outside the main flow', detail: 'A set of real opportunities were found sitting in a stage from before the pipeline was fully built out — likely just needs moving into the correct stage, already flagged for review.' },
+          { label: 'Contacted automation being verified', detail: 'The automatic follow-up for newly contacted prospects hasn’t been confirmed firing yet on a real record. Actively being investigated before we rely on it — will report back once confirmed either way.' },
         ],
       },
     ],
@@ -301,10 +311,11 @@ export const systemCards: SystemCard[] = [
     lanes: [
       {
         name: 'Open Items',
-        summary: 'Both automations above are now live — here’s what’s still open',
+        summary: 'New Prospect, Contacted, and the full Quoted-sequence are live — here’s what’s still open',
         items: [
           { label: 'Stage review', status: 'pending', detail: 'A few pipeline stages found outside the main flow need a quick decision from you — keep, merge, or clean up.' },
-          { label: 'Monitoring first real runs', status: 'pending', detail: 'Both automations are turned on and being watched to confirm they fire correctly on real prospects before we move to the next round of automations.' },
+          { label: 'Contacted automation verification', status: 'pending', detail: 'Confirming the Contacted follow-up automation fires reliably on real prospects — in progress.' },
+          { label: 'Annual Review — Cross-Sell', status: 'pending', detail: 'The next automation is underway — client email is built, internal review task is being finished.' },
         ],
       },
     ],
@@ -317,18 +328,18 @@ export const systemCards: SystemCard[] = [
     lanes: [
       {
         name: 'Phase 1 — Sales: First Contact',
-        summary: 'In progress, no texting required',
+        summary: 'Complete, no texting required',
         items: [
           { label: 'New Prospect', status: 'live', detail: 'Acknowledgment email + follow-up task when a new prospect comes in.' },
           { label: 'Contacted', status: 'live', detail: 'Follow-up email + task once a prospect reaches Initial Contact.' },
-          { label: 'Quoted-Stage Sequence', status: 'draft', detail: 'Five-email sequence guiding a prospect from receiving their quote to a decision. Mostly built.' },
+          { label: 'Quoted-Stage Sequence', status: 'live', detail: 'Five-email sequence guiding a prospect from receiving their quote to a decision. Fully built and live.' },
         ],
       },
       {
         name: 'Phase 2 — Rest of the Sales Pipeline',
-        summary: 'Not started, no texting required',
+        summary: 'In progress, no texting required',
         items: [
-          { label: 'Annual Review Task', status: 'pending', detail: 'Reminds the team to revisit a client’s coverage on a set schedule.' },
+          { label: 'Annual Review Task', status: 'draft', detail: 'Reminds the team to revisit a client’s coverage on a set schedule. The yearly trigger and client email are built; the internal review task is still being finished.' },
           { label: 'Referral Partner Touchpoints', status: 'pending', detail: 'Quarterly review task, a 45-day no-contact alert, and thank-you/anniversary messages for referral partners.' },
         ],
       },
