@@ -5,6 +5,10 @@ import {
   Zap,
   ShieldCheck,
   ListChecks,
+  Map,
+  MessageSquare,
+  ArrowRight,
+  AlertTriangle,
   type LucideIcon,
 } from 'lucide-react'
 import {
@@ -20,7 +24,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from '@/components/ui/accordion'
-import { overviewStats, systemCards, type SystemCard, type LaneItem } from '@/data/momentum'
+import { overviewStats, systemCards, projectFlow, type SystemCard, type LaneItem } from '@/data/momentum'
 
 const ICONS: Record<SystemCard['icon'], LucideIcon> = {
   workflow: Workflow,
@@ -28,6 +32,8 @@ const ICONS: Record<SystemCard['icon'], LucideIcon> = {
   zap: Zap,
   'shield-check': ShieldCheck,
   'list-checks': ListChecks,
+  map: Map,
+  'message-square': MessageSquare,
 }
 
 function StatusBadge({ status }: { status: LaneItem['status'] }) {
@@ -36,11 +42,13 @@ function StatusBadge({ status }: { status: LaneItem['status'] }) {
     live: 'bg-green/10 text-green border-green/30',
     draft: 'bg-accent/10 text-accent border-accent/30',
     pending: 'bg-orange/10 text-orange border-orange/30',
+    blocked: 'bg-red-500/10 text-red-600 border-red-500/30',
   }
   const labels: Record<NonNullable<LaneItem['status']>, string> = {
     live: 'Live',
     draft: 'Built',
     pending: 'In Progress',
+    blocked: 'On Hold',
   }
   return (
     <span
@@ -80,6 +88,36 @@ function App() {
             >
               <div className="text-2xl font-bold text-navy">{stat.value}</div>
               <div className="text-xs font-medium text-muted">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Project flow */}
+      <div className="mx-auto mt-10 max-w-5xl px-6 sm:px-10">
+        <h2 className="mb-1 text-base font-bold text-navy">How a Lead Becomes a Client</h2>
+        <p className="mb-4 text-sm text-muted">Your own process, end to end</p>
+        <div className="flex flex-wrap items-stretch gap-2 rounded-lg border border-border bg-white p-4 shadow-sm sm:gap-1">
+          {projectFlow.map((step, i) => (
+            <div key={step.label} className="flex items-center gap-1">
+              <div
+                className={`flex min-w-[140px] flex-col justify-center rounded-md border px-3 py-2 text-center text-xs font-semibold ${
+                  step.flag
+                    ? 'border-red-500/30 bg-red-500/5 text-red-700'
+                    : 'border-border bg-light text-navy'
+                }`}
+              >
+                <span>{step.label}</span>
+                {step.flag && (
+                  <span className="mt-1 flex items-center justify-center gap-1 text-[10px] font-medium normal-case text-red-600">
+                    <AlertTriangle className="h-3 w-3 shrink-0" />
+                    {step.flag}
+                  </span>
+                )}
+              </div>
+              {i < projectFlow.length - 1 && (
+                <ArrowRight className="h-4 w-4 shrink-0 text-muted" />
+              )}
             </div>
           ))}
         </div>

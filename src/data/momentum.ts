@@ -1,6 +1,6 @@
 export type LaneItem = {
   label: string
-  status?: 'live' | 'draft' | 'pending'
+  status?: 'live' | 'draft' | 'pending' | 'blocked'
   detail: string
 }
 
@@ -14,8 +14,13 @@ export type SystemCard = {
   id: string
   title: string
   tagline: string
-  icon: 'workflow' | 'database' | 'zap' | 'shield-check' | 'list-checks'
+  icon: 'workflow' | 'database' | 'zap' | 'shield-check' | 'list-checks' | 'map' | 'message-square'
   lanes: Lane[]
+}
+
+export type FlowStep = {
+  label: string
+  flag?: string
 }
 
 export const overviewStats: { label: string; value: string }[] = [
@@ -23,6 +28,16 @@ export const overviewStats: { label: string; value: string }[] = [
   { label: 'Custom Data Panels', value: '3' },
   { label: 'Automations Live', value: '2' },
   { label: 'Core System', value: 'Momentum AMS' },
+]
+
+export const projectFlow: FlowStep[] = [
+  { label: 'Marketing / Referral Source' },
+  { label: 'Lead Enters CRM' },
+  { label: 'Automated Welcome & Follow-Up' },
+  { label: 'Calls, Emails, Texts, Tasks & Appointments', flag: 'Texting automation on hold — pending Twilio setup' },
+  { label: 'Proposal Presented' },
+  { label: 'Prospect Becomes a Client' },
+  { label: 'Managed in Momentum' },
 ]
 
 export const systemCards: SystemCard[] = [
@@ -236,6 +251,93 @@ export const systemCards: SystemCard[] = [
         items: [
           { label: 'Stage review', status: 'pending', detail: 'A few pipeline stages found outside the main flow need a quick decision from you — keep, merge, or clean up.' },
           { label: 'Monitoring first real runs', status: 'pending', detail: 'Both automations are turned on and being watched to confirm they fire correctly on real prospects before we move to the next round of automations.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'roadmap',
+    title: 'Proposed Roadmap — For Your Review',
+    tagline: 'Based on your own documents, pipelines, and stated priorities. This is a draft, not final — let us know what needs adjusting.',
+    icon: 'map',
+    lanes: [
+      {
+        name: 'Phase 1 — Sales: First Contact',
+        summary: 'In progress, no texting required',
+        items: [
+          { label: 'New Prospect', status: 'live', detail: 'Acknowledgment email + follow-up task when a new prospect comes in.' },
+          { label: 'Contacted', status: 'live', detail: 'Follow-up email + task once a prospect reaches Initial Contact.' },
+          { label: 'Quoted-Stage Sequence', status: 'draft', detail: 'Five-email sequence guiding a prospect from receiving their quote to a decision. Mostly built.' },
+        ],
+      },
+      {
+        name: 'Phase 2 — Rest of the Sales Pipeline',
+        summary: 'Not started, no texting required',
+        items: [
+          { label: 'Annual Review Task', status: 'pending', detail: 'Reminds the team to revisit a client’s coverage on a set schedule.' },
+          { label: 'Referral Partner Touchpoints', status: 'pending', detail: 'Quarterly review task, a 45-day no-contact alert, and thank-you/anniversary messages for referral partners.' },
+        ],
+      },
+      {
+        name: 'Phase 3 — New Client Onboarding',
+        summary: '12 stages, currently no automation — mostly no texting required',
+        items: [
+          { label: 'Onboarding Touchpoints', status: 'pending', detail: 'Thank You Card, Docs Delivered, Billing Explained, Portal Setup, Coverage Review, Claims Process Intro, Referral Request, Google Review Request, and a 30-Day Check-In.' },
+          { label: 'Welcome Message', status: 'blocked', detail: 'Your own plan calls for this as an email + text — the text portion is on hold until texting automation is unblocked.' },
+        ],
+      },
+      {
+        name: 'Phase 4 — Active Client Care',
+        summary: '9 touchpoints, currently no automation — no texting required',
+        items: [
+          { label: 'Ongoing Relationship Touchpoints', status: 'pending', detail: 'Birthday message, quarterly check-in, seasonal safety email, life-event check-in, cross-sell opportunity, claims follow-up, policy change tracking, referral opportunity, and annual coverage review.' },
+        ],
+      },
+      {
+        name: 'Phase 5 — Renewal Automation',
+        summary: 'Blocked until texting is unblocked',
+        items: [
+          { label: 'Full Renewal Timeline', status: 'blocked', detail: 'Your documented 120-day-to-5-day renewal sequence includes a required text step at the 90-day mark — waiting on texting automation before this can be built.' },
+        ],
+      },
+      {
+        name: 'Phase 6 — Long-Term Vision',
+        summary: 'From your own stated goals, further out',
+        items: [
+          { label: 'Claims Pipeline Automation', status: 'pending', detail: 'Automating the 7-stage claims process.' },
+          { label: 'Expanded Pipelines', status: 'pending', detail: 'Marketing, a dedicated Referral Partner Pipeline, and Commercial Risk Management.' },
+          { label: 'Marketing Content Support', status: 'pending', detail: 'Getting your marketing assistant fully set up to create branded video content at scale.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'communication',
+    title: 'Communication Tools Status',
+    tagline: 'Where texting and calling automation actually stand right now',
+    icon: 'message-square',
+    lanes: [
+      {
+        name: 'Calls — Working Today',
+        summary: 'Lightspeed Voice handles this already',
+        items: [
+          { label: 'Call Logging', status: 'live', detail: 'Calls are automatically transcribed and logged to the client record — nothing further needed here.' },
+        ],
+      },
+      {
+        name: 'Texting — On Hold',
+        summary: 'The one real blocker in this whole plan',
+        items: [
+          { label: 'Automated Texting', status: 'blocked', detail: 'Momentum’s automation engine cannot send texts through Lightspeed directly — this is a platform limitation, not something specific to your account. It requires connecting a second tool (Twilio) as the sending line, with the actual text templates and logic still built and managed inside Momentum.' },
+          { label: 'Setup In Progress', status: 'pending', detail: 'A Twilio account request has been submitted. Once approved, a required registration step for US business texting typically takes a few weeks before real messages can go out.' },
+        ],
+      },
+      {
+        name: 'Why This Takes Care to Get Right',
+        summary: 'Compliance requirements, not optional steps',
+        items: [
+          { label: 'Consent Requirement', status: 'pending', detail: 'US law requires clear opt-in consent before sending marketing or automated texts — this gets built into the setup from the start, not added later.' },
+          { label: 'Carrier Registration', status: 'pending', detail: 'Business texting numbers need to be registered with carriers, or a large share of messages can get silently blocked before they reach anyone.' },
         ],
       },
     ],
