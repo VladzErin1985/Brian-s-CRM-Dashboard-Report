@@ -24,7 +24,7 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from '@/components/ui/accordion'
-import { overviewStats, systemCards, projectFlow, type SystemCard, type LaneItem } from '@/data/momentum'
+import { overviewStats, systemCards, projectFlow, pipelineFlows, type SystemCard, type LaneItem, type FlowStep } from '@/data/momentum'
 
 const ICONS: Record<SystemCard['icon'], LucideIcon> = {
   workflow: Workflow,
@@ -56,6 +56,35 @@ function StatusBadge({ status }: { status: LaneItem['status'] }) {
     >
       {labels[status]}
     </span>
+  )
+}
+
+function FlowChart({ steps }: { steps: FlowStep[] }) {
+  return (
+    <div className="flex flex-wrap items-stretch gap-2 rounded-lg border border-border bg-white p-4 shadow-sm sm:gap-1">
+      {steps.map((step, i) => (
+        <div key={step.label} className="flex items-center gap-1">
+          <div
+            className={`flex min-w-[140px] flex-col justify-center rounded-md border px-3 py-2 text-center text-xs font-semibold ${
+              step.flag
+                ? 'border-red-500/30 bg-red-500/5 text-red-700'
+                : 'border-border bg-light text-navy'
+            }`}
+          >
+            <span>{step.label}</span>
+            {step.flag && (
+              <span className="mt-1 flex items-center justify-center gap-1 text-[10px] font-medium normal-case text-red-600">
+                <AlertTriangle className="h-3 w-3 shrink-0" />
+                {step.flag}
+              </span>
+            )}
+          </div>
+          {i < steps.length - 1 && (
+            <ArrowRight className="h-4 w-4 shrink-0 text-muted" />
+          )}
+        </div>
+      ))}
+    </div>
   )
 }
 
@@ -97,27 +126,19 @@ function App() {
       <div className="mx-auto mt-10 max-w-5xl px-6 sm:px-10">
         <h2 className="mb-1 text-base font-bold text-navy">How a Lead Becomes a Client</h2>
         <p className="mb-4 text-sm text-muted">Your own process, end to end</p>
-        <div className="flex flex-wrap items-stretch gap-2 rounded-lg border border-border bg-white p-4 shadow-sm sm:gap-1">
-          {projectFlow.map((step, i) => (
-            <div key={step.label} className="flex items-center gap-1">
-              <div
-                className={`flex min-w-[140px] flex-col justify-center rounded-md border px-3 py-2 text-center text-xs font-semibold ${
-                  step.flag
-                    ? 'border-red-500/30 bg-red-500/5 text-red-700'
-                    : 'border-border bg-light text-navy'
-                }`}
-              >
-                <span>{step.label}</span>
-                {step.flag && (
-                  <span className="mt-1 flex items-center justify-center gap-1 text-[10px] font-medium normal-case text-red-600">
-                    <AlertTriangle className="h-3 w-3 shrink-0" />
-                    {step.flag}
-                  </span>
-                )}
-              </div>
-              {i < projectFlow.length - 1 && (
-                <ArrowRight className="h-4 w-4 shrink-0 text-muted" />
-              )}
+        <FlowChart steps={projectFlow} />
+      </div>
+
+      {/* Pipeline detail flows */}
+      <div className="mx-auto mt-10 max-w-5xl px-6 sm:px-10">
+        <h2 className="mb-1 text-base font-bold text-navy">Pipeline Flows</h2>
+        <p className="mb-4 text-sm text-muted">Where automation is proposed next, from your own pipeline structure</p>
+        <div className="space-y-6">
+          {pipelineFlows.map((flow) => (
+            <div key={flow.title}>
+              <h3 className="mb-0.5 text-sm font-bold text-navy">{flow.title}</h3>
+              <p className="mb-2 text-xs text-muted">{flow.summary}</p>
+              <FlowChart steps={flow.steps} />
             </div>
           ))}
         </div>

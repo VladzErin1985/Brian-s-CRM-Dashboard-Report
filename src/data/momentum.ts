@@ -40,6 +40,56 @@ export const projectFlow: FlowStep[] = [
   { label: 'Managed in Momentum' },
 ]
 
+export const pipelineFlows: { title: string; summary: string; steps: FlowStep[] }[] = [
+  {
+    title: 'New Client Onboarding',
+    summary: '12 steps, right after a policy is bound — Phase 3 of the roadmap',
+    steps: [
+      { label: 'Policy Bound' },
+      { label: 'Welcome Email / Text', flag: 'Text portion on hold — pending Twilio setup' },
+      { label: 'Thank You Card' },
+      { label: 'Docs Delivered' },
+      { label: 'Billing Explained' },
+      { label: 'Portal Setup' },
+      { label: 'Coverage Review' },
+      { label: 'Claims Process Intro' },
+      { label: 'Referral Request' },
+      { label: 'Google Review Request' },
+      { label: '30-Day Check-In' },
+      { label: 'Complete' },
+    ],
+  },
+  {
+    title: 'Active Client Care',
+    summary: '9 ongoing touchpoints for current clients — Phase 4 of the roadmap',
+    steps: [
+      { label: 'Birthday' },
+      { label: 'Quarterly Touchpoint' },
+      { label: 'Seasonal Safety Email' },
+      { label: 'Life Event Check-In' },
+      { label: 'Cross-Sell Opportunity' },
+      { label: 'Claims Follow-Up' },
+      { label: 'Policy Change Requests' },
+      { label: 'Referral Opportunity' },
+      { label: 'Annual Coverage Review' },
+    ],
+  },
+  {
+    title: 'Renewal Timeline',
+    summary: '120 days out to renewal date — Phase 5 of the roadmap',
+    steps: [
+      { label: '120 Days Out — Educational Email' },
+      { label: '90 Days Out — Text Reminder', flag: 'On hold — pending Twilio setup' },
+      { label: '60 Days Out — Coverage Review' },
+      { label: '45 Days Out — Internal Reminder' },
+      { label: '30 Days Out — Client Meeting' },
+      { label: '15 Days Out — Proposal' },
+      { label: '5 Days Out — Follow-Up' },
+      { label: 'Renewal Date — Thank You' },
+    ],
+  },
+]
+
 export const systemCards: SystemCard[] = [
   {
     id: 'pipelines',
