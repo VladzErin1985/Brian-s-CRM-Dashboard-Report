@@ -26,7 +26,7 @@ export type FlowStep = {
 export const overviewStats: { label: string; value: string }[] = [
   { label: 'Business Pipelines', value: '6' },
   { label: 'Custom Data Panels', value: '3' },
-  { label: 'Automations Live', value: '3' },
+  { label: 'Automations Live', value: '4' },
   { label: 'Core System', value: 'Momentum AMS' },
 ]
 
@@ -252,8 +252,8 @@ export const systemCards: SystemCard[] = [
         summary: 'Fires when a prospect reaches Initial Contact',
         items: [
           { label: 'Trigger', detail: 'Fires when a prospect’s opportunity reaches the Initial Contact stage of the pipeline.' },
-          { label: 'Follow-Up Email', status: 'live', detail: 'A warmer follow-up referencing the conversation, letting them know options are being prepared.' },
-          { label: 'Follow-Up Task', status: 'live', detail: 'A task is automatically created for the assigned team member.' },
+          { label: 'Follow-Up Email', status: 'pending', detail: 'A warmer follow-up referencing the conversation, letting them know options are being prepared. Confirmed the trigger and task both fire correctly on a real record — the email step itself isn’t going out yet, and a fix is actively in progress before we call this fully live.' },
+          { label: 'Follow-Up Task', status: 'live', detail: 'A task is automatically created for the assigned team member. Confirmed working on a real record.' },
         ],
       },
       {
@@ -273,8 +273,8 @@ export const systemCards: SystemCard[] = [
         summary: 'Fires once a year, on each policy’s own anniversary',
         items: [
           { label: 'Trigger', detail: 'Fires automatically 365 days after a policy’s effective date — repeats every year on that policy’s own anniversary.' },
-          { label: 'Coverage Check Email', status: 'draft', detail: 'A soft, personal note checking that the client’s full coverage picture is up to date — framed as a review, not a sales pitch.' },
-          { label: 'Review Task', status: 'pending', detail: 'An internal task for the team to actually review the account and confirm it’s been checked — still being finished.' },
+          { label: 'Coverage Check Email', status: 'live', detail: 'A soft, personal note checking that the client’s full coverage picture is up to date — framed as a review, not a sales pitch.' },
+          { label: 'Review Task', status: 'live', detail: 'An internal task for the team to actually review the account and confirm it’s been checked. Built and live.' },
         ],
       },
     ],
@@ -298,7 +298,7 @@ export const systemCards: SystemCard[] = [
         summary: 'Spot-checked live prospect/opportunity data against the pipeline',
         items: [
           { label: 'One prospect’s opportunities found outside the main flow', detail: 'A set of real opportunities were found sitting in a stage from before the pipeline was fully built out — likely just needs moving into the correct stage, already flagged for review.' },
-          { label: 'Contacted automation being verified', detail: 'The automatic follow-up for newly contacted prospects hasn’t been confirmed firing yet on a real record. Actively being investigated before we rely on it — will report back once confirmed either way.' },
+          { label: 'Contacted automation — real finding, fix in progress', detail: 'Confirmed on a real record: the internal follow-up task fires correctly. The client-facing email piece is not going out yet — root cause identified, fix in progress before this is fully relied on.' },
         ],
       },
     ],
@@ -311,11 +311,10 @@ export const systemCards: SystemCard[] = [
     lanes: [
       {
         name: 'Open Items',
-        summary: 'New Prospect, Contacted, and the full Quoted-sequence are live — here’s what’s still open',
+        summary: 'New Prospect, Contacted, the Quoted-sequence, and Annual Review — Cross-Sell are all live — here’s what’s still open',
         items: [
           { label: 'Stage review', status: 'pending', detail: 'A few pipeline stages found outside the main flow need a quick decision from you — keep, merge, or clean up.' },
-          { label: 'Contacted automation verification', status: 'pending', detail: 'Confirming the Contacted follow-up automation fires reliably on real prospects — in progress.' },
-          { label: 'Annual Review — Cross-Sell', status: 'pending', detail: 'The next automation is underway — client email is built, internal review task is being finished.' },
+          { label: 'Contacted email fix', status: 'pending', detail: 'The follow-up task is confirmed working. The email piece of this automation needs a fix before it goes out reliably — in progress.' },
         ],
       },
     ],
@@ -339,7 +338,7 @@ export const systemCards: SystemCard[] = [
         name: 'Phase 2 — Rest of the Sales Pipeline',
         summary: 'In progress, no texting required',
         items: [
-          { label: 'Annual Review Task', status: 'draft', detail: 'Reminds the team to revisit a client’s coverage on a set schedule. The yearly trigger and client email are built; the internal review task is still being finished.' },
+          { label: 'Annual Review Task', status: 'live', detail: 'Reminds the team to revisit a client’s coverage on a set schedule. Fully built and live — yearly trigger, client email, and internal review task all in place.' },
           { label: 'Referral Partner Touchpoints', status: 'pending', detail: 'Quarterly review task, a 45-day no-contact alert, and thank-you/anniversary messages for referral partners.' },
         ],
       },
