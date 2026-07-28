@@ -277,6 +277,23 @@ export const systemCards: SystemCard[] = [
           { label: 'Review Task', status: 'live', detail: 'An internal task for the team to actually review the account and confirm it’s been checked. Built and live.' },
         ],
       },
+      {
+        name: 'New Client Onboarding — Welcome Through 30-Day Check-In',
+        summary: 'Fires once a policy is bound and a client enters onboarding — built, not yet turned on',
+        items: [
+          { label: 'Trigger', detail: 'Fires when a new client record is created after a policy is bound.' },
+          { label: 'Welcome Email', status: 'draft', detail: 'A personal note letting the new client know what happens next. The text-message half of this step is still on hold, same as everywhere else texting is involved.' },
+          { label: 'Thank You Card Task', status: 'draft', detail: 'An internal reminder for the team to send a thank-you card.' },
+          { label: 'Docs Delivered Task', status: 'draft', detail: 'An internal task confirming policy documents have gone out.' },
+          { label: 'Billing Explained Email', status: 'pending', detail: 'Walks the client through how and when they’ll be billed. Drafted — needs a quick confirmation from you that it matches how billing actually works before it goes live.' },
+          { label: 'Portal Setup Task', status: 'draft', detail: 'An internal task confirming the client is set up on the client portal.' },
+          { label: 'Coverage Review Task', status: 'draft', detail: 'An internal task confirming coverage has been reviewed with the client.' },
+          { label: 'Claims Process Intro Email', status: 'draft', detail: 'Walks the client through what to do if they ever need to file a claim.' },
+          { label: 'Referral Request Email', status: 'draft', detail: 'A natural, low-pressure ask for referrals once the client is settled in.' },
+          { label: 'Google Review Request Email', status: 'pending', detail: 'Asks for a review once the experience has been a good one. Drafted — needs your actual Google review link before it can go live.' },
+          { label: '30-Day Check-In (Task + Email)', status: 'draft', detail: 'A one-month check-in, both an internal task and a client email.' },
+        ],
+      },
     ],
   },
   {
@@ -315,6 +332,7 @@ export const systemCards: SystemCard[] = [
         items: [
           { label: 'Stage review', status: 'pending', detail: 'A few pipeline stages found outside the main flow need a quick decision from you — keep, merge, or clean up.' },
           { label: 'Contacted email fix', status: 'pending', detail: 'The follow-up task is confirmed working. The email piece of this automation needs a fix before it goes out reliably — in progress.' },
+          { label: 'New Client Onboarding — final review needed', status: 'pending', detail: 'The full onboarding sequence (Welcome through 30-Day Check-In) is drafted and built. Before it goes live, we need your actual Google review link and a quick confirmation that the billing email matches how billing really works.' },
         ],
       },
     ],
@@ -344,9 +362,10 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Phase 3 — New Client Onboarding',
-        summary: '12 stages, currently no automation — mostly no texting required',
+        summary: '12 stages — full sequence now drafted and built, pending final review',
         items: [
-          { label: 'Onboarding Touchpoints', status: 'pending', detail: 'Thank You Card, Docs Delivered, Billing Explained, Portal Setup, Coverage Review, Claims Process Intro, Referral Request, Google Review Request, and a 30-Day Check-In.' },
+          { label: 'Onboarding Touchpoints', status: 'draft', detail: 'Welcome Email, Thank You Card, Docs Delivered, Portal Setup, Coverage Review, Claims Process Intro, Referral Request, and 30-Day Check-In are all drafted and built — ready for a final review before going live.' },
+          { label: 'Billing Explained & Google Review Request', status: 'pending', detail: 'Both drafted, but need two quick confirmations from you first — your actual billing setup, and your real Google Business review link.' },
           { label: 'Welcome Message', status: 'blocked', detail: 'Your own plan calls for this as an email + text — the text portion is on hold until texting automation is unblocked.' },
         ],
       },
