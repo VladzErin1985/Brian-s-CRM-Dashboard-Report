@@ -25,7 +25,7 @@ export type FlowStep = {
 
 export const overviewStats: { label: string; value: string }[] = [
   { label: 'Business Pipelines', value: '6' },
-  { label: 'Custom Data Panels', value: '2' },
+  { label: 'Custom Data Panels', value: '3' },
   { label: 'Automations Live', value: '4' },
   { label: 'Core System', value: 'Momentum AMS' },
 ]
@@ -214,12 +214,12 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Referral Partner Details',
-        summary: 'Planned — not yet built in the system',
+        summary: 'Tracked on every referral source',
         items: [
-          { label: 'Partner Profession', status: 'pending', detail: 'What the referral partner does for a living. Planned field, being set up now.' },
-          { label: 'Last Touchpoint Date', status: 'pending', detail: 'The last time this partner was contacted. Planned field, being set up now.' },
-          { label: 'Referrals This Year', status: 'pending', detail: 'How many referrals this partner has sent this year. Planned field, being set up now.' },
-          { label: 'Partnership Anniversary', status: 'pending', detail: 'The anniversary date of the referral relationship. Planned field, being set up now.' },
+          { label: 'Partner Profession', detail: 'What the referral partner does for a living.' },
+          { label: 'Last Touchpoint Date', detail: 'The last time this partner was contacted.' },
+          { label: 'Referrals This Year', detail: 'How many referrals this partner has sent this year.' },
+          { label: 'Partnership Anniversary', detail: 'The anniversary date of the referral relationship.' },
         ],
       },
       {
