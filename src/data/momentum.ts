@@ -294,6 +294,15 @@ export const systemCards: SystemCard[] = [
           { label: '30-Day Check-In (Task + Email)', status: 'draft', detail: 'A one-month check-in, both an internal task and a client email.' },
         ],
       },
+      {
+        name: 'Referral Partner — 45-Day No-Contact Alert',
+        summary: 'Not live or complete yet — early draft, still being set up',
+        items: [
+          { label: 'Trigger', status: 'pending', detail: 'Meant to fire 45 days after a referral partner’s last touchpoint. Drafted, but not yet scoped to referral partners specifically — still needs a real tagging step finished before it only applies to the right people.' },
+          { label: 'Check-In Task', status: 'pending', detail: 'An internal reminder to check in with the partner and log the touchpoint. Built, but sitting behind the still-open trigger scoping above.' },
+          { label: 'Referral partner list', status: 'pending', detail: 'Still confirming with you who your actual referral partners are so they can be set up properly in the system.' },
+        ],
+      },
     ],
   },
   {
