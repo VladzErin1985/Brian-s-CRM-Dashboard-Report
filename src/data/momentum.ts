@@ -252,7 +252,7 @@ export const systemCards: SystemCard[] = [
         summary: 'Fires when a prospect reaches Initial Contact',
         items: [
           { label: 'Trigger', detail: 'Fires when a prospect’s opportunity reaches the Initial Contact stage of the pipeline.' },
-          { label: 'Follow-Up Email', status: 'pending', detail: 'A warmer follow-up referencing the conversation, letting them know options are being prepared. Confirmed the trigger and task both fire correctly on a real record. Sent a live test of the email itself and confirmed the content and delivery setup are both correct — the remaining gap is specifically in how the automated trigger fires this step, and that fix is still in progress before we call this fully live.' },
+          { label: 'Follow-Up Email', status: 'live', detail: 'A warmer follow-up referencing the conversation, letting them know options are being prepared. Confirmed live on two separate real test records — the automated trigger now fires the email correctly on its own, no manual send needed.' },
           { label: 'Follow-Up Task', status: 'live', detail: 'A task is automatically created for the assigned team member. Confirmed working on a real record.' },
         ],
       },
@@ -296,10 +296,10 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Referral Partner — 45-Day No-Contact Alert',
-        summary: 'Not live or complete yet — early draft, still being set up',
+        summary: 'Built and correctly scoped — waiting on your real partner list before turning it on',
         items: [
-          { label: 'Trigger', status: 'pending', detail: 'Meant to fire 45 days after a referral partner’s last touchpoint. Drafted, but not yet scoped to referral partners specifically — still needs a real tagging step finished before it only applies to the right people.' },
-          { label: 'Check-In Task', status: 'pending', detail: 'An internal reminder to check in with the partner and log the touchpoint. Built, but sitting behind the still-open trigger scoping above.' },
+          { label: 'Trigger', status: 'draft', detail: 'Meant to fire 45 days after a referral partner’s last touchpoint. Now correctly scoped to only Referral Partner-tagged records — the tagging gap that was blocking this is fixed. Ready to activate.' },
+          { label: 'Check-In Task', status: 'draft', detail: 'An internal reminder to check in with the partner and log the touchpoint. Built and ready — sitting behind the referral partner list below.' },
           { label: 'Referral partner list', status: 'pending', detail: 'Still confirming with you who your actual referral partners are so they can be set up properly in the system.' },
         ],
       },
@@ -324,7 +324,7 @@ export const systemCards: SystemCard[] = [
         summary: 'Spot-checked live prospect/opportunity data against the pipeline',
         items: [
           { label: 'One prospect’s opportunities found outside the main flow', detail: 'A set of real opportunities were found sitting in a stage from before the pipeline was fully built out — likely just needs moving into the correct stage, already flagged for review.' },
-          { label: 'Contacted automation — real finding, fix in progress', detail: 'Confirmed on a real record: the internal follow-up task fires correctly. The client-facing email piece is not going out yet — root cause identified, fix in progress before this is fully relied on.' },
+          { label: 'Contacted automation — confirmed fixed', detail: 'Confirmed on two separate real test records: both the internal follow-up task and the client-facing email now fire correctly and automatically. The bug that was silently blocking the email is fixed.' },
         ],
       },
     ],
@@ -340,8 +340,8 @@ export const systemCards: SystemCard[] = [
         summary: 'New Prospect, Contacted, the Quoted-sequence, and Annual Review — Cross-Sell are all live — here’s what’s still open',
         items: [
           { label: 'Stage review', status: 'pending', detail: 'A few pipeline stages found outside the main flow need a quick decision from you — keep, merge, or clean up.' },
-          { label: 'Contacted email fix', status: 'pending', detail: 'The follow-up task is confirmed working. The email piece of this automation needs a fix before it goes out reliably — in progress.' },
           { label: 'New Client Onboarding — ready, awaiting your go-ahead', status: 'draft', detail: 'The full onboarding sequence (Welcome through 30-Day Check-In) is fully drafted, built, and now content-complete — the billing email and Google review request both use your own real content. Sitting ready, waiting on your go-ahead to turn it on.' },
+          { label: 'Referral Partner — ready, waiting on your partner list', status: 'draft', detail: 'The 45-day no-contact alert is built and now correctly scoped to referral partners only. Just needs your confirmation of who your actual referral partners are before it goes live.' },
         ],
       },
     ],
