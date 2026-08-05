@@ -303,6 +303,14 @@ export const systemCards: SystemCard[] = [
           { label: 'Referral partner list', status: 'pending', detail: 'Still confirming with you who your actual referral partners are so they can be set up properly in the system.' },
         ],
       },
+      {
+        name: 'Active Client Care — Birthday',
+        summary: 'Built and correctly timed — ready to activate whenever you are',
+        items: [
+          { label: 'Trigger', status: 'draft', detail: 'Fires on the client’s actual birthday. Caught and fixed a timing bug during build — it was originally set to fire a day late, corrected to fire on the real day.' },
+          { label: 'Birthday Email', status: 'draft', detail: 'A warm, personal note wishing the client a happy birthday — explicitly no sales content, framed as a thank-you for being a client, not a pitch.' },
+        ],
+      },
     ],
   },
   {
@@ -379,9 +387,10 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Phase 4 — Active Client Care',
-        summary: '9 touchpoints, currently no automation — no texting required',
+        summary: '9 touchpoints total, 1 of 9 built — no texting required',
         items: [
-          { label: 'Ongoing Relationship Touchpoints', status: 'pending', detail: 'Birthday message, quarterly check-in, seasonal safety email, life-event check-in, cross-sell opportunity, claims follow-up, policy change tracking, referral opportunity, and annual coverage review.' },
+          { label: 'Birthday message', status: 'draft', detail: 'Built and ready to activate — see the Automations section above for full detail.' },
+          { label: 'Remaining 8 touchpoints', status: 'pending', detail: 'Quarterly check-in, seasonal safety email, life-event check-in, cross-sell opportunity, claims follow-up, policy change tracking, referral opportunity, and annual coverage review.' },
         ],
       },
       {
