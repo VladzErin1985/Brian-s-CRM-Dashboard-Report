@@ -311,6 +311,14 @@ export const systemCards: SystemCard[] = [
           { label: 'Birthday Email', status: 'draft', detail: 'A warm, personal note wishing the client a happy birthday — explicitly no sales content, framed as a thank-you for being a client, not a pitch.' },
         ],
       },
+      {
+        name: 'Active Client Care — Claims Follow-Up',
+        summary: 'Built for your 3 most common claim types — ready to activate whenever you are',
+        items: [
+          { label: 'Trigger', status: 'draft', detail: 'Fires while a claim is open, covering your 3 most common claim types — Automobile Loss, Property Loss, and General Liability — built as 3 separate workflows since Momentum requires its own trigger per claim type rather than one general "any claim" option. The remaining 4 types (Commercial Auto, Medical/Healthcare, Other, Worker Compensation) aren’t built yet.' },
+          { label: 'Claims Follow-Up Email', status: 'draft', detail: 'A warm, supportive check-in while the claim is still active, letting the client know the team is there to help — no sales content, same message used across all 3 workflows.' },
+        ],
+      },
     ],
   },
   {
@@ -387,10 +395,11 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Phase 4 — Active Client Care',
-        summary: '9 touchpoints total, 1 of 9 built — no texting required',
+        summary: '9 touchpoints total, 2 of 9 built — no texting required',
         items: [
           { label: 'Birthday message', status: 'draft', detail: 'Built and ready to activate — see the Automations section above for full detail.' },
-          { label: 'Remaining 8 touchpoints', status: 'pending', detail: 'Quarterly check-in, seasonal safety email, life-event check-in, cross-sell opportunity, claims follow-up, policy change tracking, referral opportunity, and annual coverage review.' },
+          { label: 'Claims Follow-Up message', status: 'draft', detail: 'Built for your 3 most common claim types (Automobile Loss, Property Loss, General Liability) — see the Automations section above for full detail.' },
+          { label: 'Remaining 7 touchpoints', status: 'pending', detail: 'Quarterly check-in, seasonal safety email, life-event check-in, cross-sell opportunity, policy change tracking, referral opportunity, and annual coverage review.' },
         ],
       },
       {
