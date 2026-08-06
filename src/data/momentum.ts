@@ -319,6 +319,14 @@ export const systemCards: SystemCard[] = [
           { label: 'Claims Follow-Up Email', status: 'draft', detail: 'A warm, supportive check-in while the claim is still active, letting the client know the team is there to help — no sales content, same message used across all 3 workflows.' },
         ],
       },
+      {
+        name: 'Active Client Care — Quarterly Check-In',
+        summary: 'Two check-ins built for now (90 and 270 days into the policy year) — ready to activate whenever you are',
+        items: [
+          { label: 'Trigger', status: 'draft', detail: 'Fires 90 days and 270 days after a policy’s effective date — built as 2 separate workflows since Momentum only supports a one-time day offset per trigger, not a repeating cadence. A true quarterly cadence would need 2 more (180 and 360 days); started with 2 for now and can add the rest once we know if strict quarterly timing matters to you.' },
+          { label: 'Check-In Email', status: 'draft', detail: 'A simple, no-sales check-in asking if anything has changed (new vehicle, move, renovation) that might affect coverage — same message used on both workflows.' },
+        ],
+      },
     ],
   },
   {
@@ -395,11 +403,12 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Phase 4 — Active Client Care',
-        summary: '9 touchpoints total, 2 of 9 built — no texting required',
+        summary: '9 touchpoints total, 3 of 9 built — no texting required',
         items: [
           { label: 'Birthday message', status: 'draft', detail: 'Built and ready to activate — see the Automations section above for full detail.' },
           { label: 'Claims Follow-Up message', status: 'draft', detail: 'Built for your 3 most common claim types (Automobile Loss, Property Loss, General Liability) — see the Automations section above for full detail.' },
-          { label: 'Remaining 7 touchpoints', status: 'pending', detail: 'Quarterly check-in, seasonal safety email, life-event check-in, cross-sell opportunity, policy change tracking, referral opportunity, and annual coverage review.' },
+          { label: 'Quarterly check-in', status: 'draft', detail: 'Two check-ins built for now (90 and 270 days into the policy year) — see the Automations section above for full detail.' },
+          { label: 'Remaining 6 touchpoints', status: 'pending', detail: 'Seasonal safety email, life-event check-in, cross-sell opportunity, policy change tracking, referral opportunity, and annual coverage review.' },
         ],
       },
       {
