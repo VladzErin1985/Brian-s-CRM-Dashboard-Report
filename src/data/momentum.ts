@@ -327,6 +327,14 @@ export const systemCards: SystemCard[] = [
           { label: 'Check-In Email', status: 'draft', detail: 'A simple, no-sales check-in asking if anything has changed (new vehicle, move, renovation) that might affect coverage — same message used on both workflows.' },
         ],
       },
+      {
+        name: 'Active Client Care — Referral Opportunity',
+        summary: 'Built and correctly timed — ready to activate whenever you are',
+        items: [
+          { label: 'Trigger', status: 'draft', detail: 'Fires 60 days after a policy’s effective date — enough time for a client to have settled in and formed a real opinion before being asked.' },
+          { label: 'Referral Ask Email', status: 'draft', detail: 'A warm, low-pressure ask for a referral if they’ve been happy with their experience — no sales content, no pressure if they haven’t.' },
+        ],
+      },
     ],
   },
   {
@@ -403,12 +411,13 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Phase 4 — Active Client Care',
-        summary: '9 touchpoints total, 3 of 9 built — no texting required',
+        summary: '9 touchpoints total, 4 of 9 built — no texting required',
         items: [
           { label: 'Birthday message', status: 'draft', detail: 'Built and ready to activate — see the Automations section above for full detail.' },
           { label: 'Claims Follow-Up message', status: 'draft', detail: 'Built for your 3 most common claim types (Automobile Loss, Property Loss, General Liability) — see the Automations section above for full detail.' },
           { label: 'Quarterly check-in', status: 'draft', detail: 'Two check-ins built for now (90 and 270 days into the policy year) — see the Automations section above for full detail.' },
-          { label: 'Remaining 6 touchpoints', status: 'pending', detail: 'Seasonal safety email, life-event check-in, cross-sell opportunity, policy change tracking, referral opportunity, and annual coverage review.' },
+          { label: 'Referral opportunity', status: 'draft', detail: 'Built and ready to activate — see the Automations section above for full detail.' },
+          { label: 'Remaining 5 touchpoints', status: 'pending', detail: 'Seasonal safety email, life-event check-in, cross-sell opportunity, policy change tracking, and annual coverage review.' },
         ],
       },
       {
