@@ -335,6 +335,14 @@ export const systemCards: SystemCard[] = [
           { label: 'Referral Ask Email', status: 'draft', detail: 'A warm, low-pressure ask for a referral if they’ve been happy with their experience — no sales content, no pressure if they haven’t.' },
         ],
       },
+      {
+        name: 'Active Client Care — Policy Change Tracking',
+        summary: 'Built for your 3 most common request types — ready to activate whenever you are',
+        items: [
+          { label: 'Trigger', status: 'draft', detail: 'Fires when a client submits a service request, covering the 3 broadest request types — General, General New, and Policy Change Request - Other — built as 3 separate workflows since Momentum requires its own trigger per request type rather than one general option. More specific types (Add Driver, Address Change, etc.) aren’t built yet.' },
+          { label: 'Acknowledgment Email', status: 'draft', detail: 'A quick note confirming the request was received and is being worked on — no sales content, same message used across all 3 workflows.' },
+        ],
+      },
     ],
   },
   {
@@ -411,13 +419,14 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Phase 4 — Active Client Care',
-        summary: '9 touchpoints total, 4 of 9 built — no texting required',
+        summary: '9 touchpoints total, 5 of 9 built — no texting required',
         items: [
           { label: 'Birthday message', status: 'draft', detail: 'Built and ready to activate — see the Automations section above for full detail.' },
           { label: 'Claims Follow-Up message', status: 'draft', detail: 'Built for your 3 most common claim types (Automobile Loss, Property Loss, General Liability) — see the Automations section above for full detail.' },
           { label: 'Quarterly check-in', status: 'draft', detail: 'Two check-ins built for now (90 and 270 days into the policy year) — see the Automations section above for full detail.' },
           { label: 'Referral opportunity', status: 'draft', detail: 'Built and ready to activate — see the Automations section above for full detail.' },
-          { label: 'Remaining 5 touchpoints', status: 'pending', detail: 'Seasonal safety email, life-event check-in, cross-sell opportunity, policy change tracking, and annual coverage review.' },
+          { label: 'Policy change tracking', status: 'draft', detail: 'Built for your 3 most common request types (General, General New, Policy Change Request - Other) — see the Automations section above for full detail.' },
+          { label: 'Remaining 4 touchpoints', status: 'pending', detail: 'Seasonal safety email (winter freeze prep, per your confirmation), life-event check-in, cross-sell opportunity, and annual coverage review.' },
         ],
       },
       {
