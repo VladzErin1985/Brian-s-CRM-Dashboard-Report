@@ -359,6 +359,14 @@ export const systemCards: SystemCard[] = [
           { label: 'Check-In Email', status: 'draft', detail: 'A warm, no-pressure note asking to revisit their coverage after a life milestone — no sales content.' },
         ],
       },
+      {
+        name: 'Active Client Care — Annual Review & Cross-Sell',
+        summary: 'Already live and running — covers both the annual coverage review and cross-sell touchpoints in one',
+        items: [
+          { label: 'Trigger', status: 'live', detail: 'Fires once a year, 365 days after each policy\'s effective date. This one workflow already covers what would\'ve been two separate touchpoints (annual coverage review + cross-sell opportunity) — no new build needed for either.' },
+          { label: 'Coverage Check Email', status: 'live', detail: 'A warm, low-pressure note inviting a full coverage review. Found and fixed a real accuracy issue: it used to name a specific line of business as the assumed gap for every client, which wasn\'t true for everyone — reworded to be accurate regardless of what a client actually has or is missing.' },
+        ],
+      },
     ],
   },
   {
@@ -435,7 +443,7 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Phase 4 — Active Client Care',
-        summary: '9 touchpoints total, 6 of 9 built as automations, 1 content-ready as a manual send — no texting required',
+        summary: '9 touchpoints total, 7 of 9 built as automations, 1 already live from before, 1 content-ready as a manual send — no texting required',
         items: [
           { label: 'Birthday message', status: 'draft', detail: 'Built and ready to activate — see the Automations section above for full detail.' },
           { label: 'Claims Follow-Up message', status: 'draft', detail: 'Built for your 3 most common claim types (Automobile Loss, Property Loss, General Liability) — see the Automations section above for full detail.' },
@@ -444,7 +452,7 @@ export const systemCards: SystemCard[] = [
           { label: 'Policy change tracking', status: 'draft', detail: 'Built for your 3 most common request types (General, General New, Policy Change Request - Other) — see the Automations section above for full detail.' },
           { label: 'Seasonal safety email', status: 'draft', detail: 'Content is written and ready (winter freeze prep, per your confirmation), but Momentum has no way to trigger a message on a shared calendar date across your whole client list — every trigger is tied to an individual record’s own date, not a fixed date. This one will need to go out as a yearly manual bulk send instead of an automation.' },
           { label: 'Life-event check-in', status: 'draft', detail: 'Built and ready to activate, triggered off a dedicated task category your team logs when a client mentions a life event — see the Automations section above for full detail.' },
-          { label: 'Remaining 2 touchpoints', status: 'pending', detail: 'Cross-sell opportunity and annual coverage review — not yet built.' },
+          { label: 'Annual coverage review + cross-sell', status: 'live', detail: 'Already covered by a workflow that\'s been live since before this dashboard existed — see the Automations section above for full detail. All 9 touchpoints are now accounted for.' },
         ],
       },
       {
