@@ -521,14 +521,15 @@ export const systemCards: SystemCard[] = [
         ],
       },
       {
-        name: 'What\'s Needed From You',
-        summary: 'Everything else is either already in place or free',
+        name: 'Tools & Accounts Needed',
+        summary: 'The actual named tools, what each one does, and what it costs',
         items: [
-          { label: 'A small hosting account (~$10–$20/mo)', status: 'pending', detail: 'Keeps the system running 24/7 rather than tied to one computer. Already on your original infrastructure list from June — not a new ask.' },
-          { label: 'An AI model account for the content engine', status: 'pending', detail: 'Free option available, or a small pay-as-you-go option — your call once we\'re ready to set it up.' },
-          { label: 'A Google account for lead capture', status: 'pending', detail: 'Free — used for a simple spreadsheet that logs new leads before they land in Momentum.' },
-          { label: 'Access to your website', status: 'pending', detail: 'So content can be added directly to what you already have.' },
-          { label: 'Everything else', detail: 'Momentum AMS (already connected), and free tools for tracking results (Google Search Console, Bing\'s AI visibility panel) — nothing further needed.' },
+          { label: 'Hermes — the AI agent itself', status: 'pending', detail: 'The same AI agent software Joey Greene uses. It\'s what actually researches questions, writes the content, and keeps it fresh over time. No cost for the software itself.' },
+          { label: 'Hostinger — hosting (~$10–$20/mo)', status: 'pending', detail: 'Runs Hermes 24/7 so it keeps working even when no one\'s at a computer. Already on your original infrastructure list from June — not a new ask.' },
+          { label: 'Nous Portal or OpenRouter — the AI "brain" behind Hermes', status: 'pending', detail: 'Nous Portal is free; OpenRouter is a small pay-as-you-go option. This is the actual model doing the thinking/writing — your call which one once we\'re ready to set it up.' },
+          { label: 'Google account — for lead capture', status: 'pending', detail: 'Free — a simple spreadsheet that logs new leads before they land in Momentum.' },
+          { label: 'Access to your website', status: 'pending', detail: 'So Hermes can add content directly to what you already have.' },
+          { label: 'Already in place — no action needed', detail: 'Momentum AMS (already connected), and free tools for tracking results: Google Search Console + Bing\'s AI visibility panel.' },
         ],
       },
       {
