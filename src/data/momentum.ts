@@ -515,9 +515,18 @@ export const systemCards: SystemCard[] = [
         name: 'What This Actually Is',
         summary: 'The short version, no jargon',
         items: [
-          { label: 'The idea', detail: 'People are increasingly asking AI tools like ChatGPT questions instead of searching Google. This project builds your website into a source those AI tools actually cite and recommend when someone asks an insurance-related question in your area — the same mechanism behind Joey Greene\'s real results.' },
+          { label: 'The idea', detail: 'People are increasingly asking AI tools like ChatGPT questions instead of searching Google — 68% of insurance shoppers now ask an AI assistant about coverage options before ever contacting an agent. This project builds your website into a source those AI tools actually cite and recommend when someone asks an insurance question in your area — the same mechanism behind Joey Greene\'s real results.' },
           { label: 'Why it works', detail: 'AI tools favor sources that are fresh, clearly structured, and back up the business\'s credentials (license numbers, years in business, etc.) in a machine-readable way. Once that foundation is in place, an AI system keeps producing new, genuinely useful content over time — real answers to real questions people search for.' },
+          { label: 'Real numbers, not a guess', detail: 'A real insurance site measured a 3.76% conversion rate on visitors referred by AI tools, versus 1.19% from regular organic search — roughly 3x higher. Separately, industry-wide data puts AI-referred visitors converting at 2–4x the rate of traditional search traffic. This isn\'t a hypothetical channel, it\'s already outperforming for agencies using it.' },
           { label: 'Not a redesign', detail: 'This adds to your existing website, it doesn\'t replace it. No rebuild required.' },
+        ],
+      },
+      {
+        name: 'Does This Actually Work With Momentum?',
+        summary: 'A fair question — yes, confirmed',
+        items: [
+          { label: 'Real, current precedent', status: 'draft', detail: 'This isn\'t just a GoHighLevel trick adapted on faith. Momentum AMS (and NowCerts, the platform it\'s built on) both have real, published AI-agent connections available — including a dedicated integration built specifically for Momentum. This system talking to Momentum the same way it talks to your website is a proven pattern, not an experiment.' },
+          { label: 'Already working today', status: 'live', detail: 'This project already has a real, working connection into your Momentum account — it\'s the same one behind every automation already built and shown on this dashboard. The lead-gen system would use that same proven connection, not a new one.' },
         ],
       },
       {
@@ -537,7 +546,7 @@ export const systemCards: SystemCard[] = [
         summary: 'A phased rollout, not a single big launch',
         items: [
           { label: 'Phase 1 — Foundation (Weeks 1–6)', status: 'pending', detail: 'Add your credentials (license numbers, years established, etc.) to your site in a format AI tools can actually read. Confirm site speed and mobile setup. Get the content system running and tested before it does anything client-facing.' },
-          { label: 'Phase 2 — Content Production (Weeks 6–18, ongoing after)', status: 'pending', detail: 'The system starts publishing real, useful answers to real questions people ask — the kind of content Joey\'s system produced, direct and specific to your lines of business. No thin or duplicate pages, ever — the same rule that made Joey\'s version work.' },
+          { label: 'Phase 2 — Content Production (Weeks 6–18, ongoing after)', status: 'pending', detail: 'The system starts publishing real, useful answers to real questions people ask — the kind of content Joey\'s system produced, direct and specific to your lines of business. Every page leads with a direct answer in the first couple sentences, written in natural language (your city, your carriers, your product types), and no thin or duplicate pages, ever — the same rule that made Joey\'s version work.' },
           { label: 'Phase 3/4 — Authority + Ongoing Monitoring', status: 'pending', detail: 'Not a one-time launch — content stays fresh and we track real results (which AI tools are citing you, and whether it\'s turning into real leads) on an ongoing basis.' },
         ],
       },
