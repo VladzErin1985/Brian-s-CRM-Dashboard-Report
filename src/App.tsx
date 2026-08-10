@@ -7,6 +7,7 @@ import {
   ListChecks,
   Map,
   MessageSquare,
+  Sparkles,
   ArrowRight,
   AlertTriangle,
   type LucideIcon,
@@ -34,6 +35,7 @@ const ICONS: Record<SystemCard['icon'], LucideIcon> = {
   'list-checks': ListChecks,
   map: Map,
   'message-square': MessageSquare,
+  sparkles: Sparkles,
 }
 
 function StatusBadge({ status }: { status: LaneItem['status'] }) {

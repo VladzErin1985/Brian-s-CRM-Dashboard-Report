@@ -14,7 +14,7 @@ export type SystemCard = {
   id: string
   title: string
   tagline: string
-  icon: 'workflow' | 'database' | 'zap' | 'shield-check' | 'list-checks' | 'map' | 'message-square'
+  icon: 'workflow' | 'database' | 'zap' | 'shield-check' | 'list-checks' | 'map' | 'message-square' | 'sparkles'
   lanes: Lane[]
 }
 
@@ -492,6 +492,52 @@ export const systemCards: SystemCard[] = [
         items: [
           { label: 'Consent Requirement', status: 'pending', detail: 'US law requires clear opt-in consent before sending marketing or automated texts — this gets built into the setup from the start, not added later.' },
           { label: 'Carrier Registration', status: 'pending', detail: 'Business texting numbers need to be registered with carriers, or a large share of messages can get silently blocked before they reach anyone.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'aeo',
+    title: 'AI Lead-Gen Project — Proposed, For Your Review',
+    tagline: 'The AI-answer-engine system we discussed, based on the real example Joey Greene showed you, scoped into an actual plan',
+    icon: 'sparkles',
+    lanes: [
+      {
+        name: 'What This Actually Is',
+        summary: 'The short version, no jargon',
+        items: [
+          { label: 'The idea', detail: 'People are increasingly asking AI tools like ChatGPT questions instead of searching Google. This project builds your website into a source those AI tools actually cite and recommend when someone asks an insurance-related question in your area — the same mechanism behind Joey Greene\'s real results.' },
+          { label: 'Why it works', detail: 'AI tools favor sources that are fresh, clearly structured, and back up the business\'s credentials (license numbers, years in business, etc.) in a machine-readable way. Once that foundation is in place, an AI system keeps producing new, genuinely useful content over time — real answers to real questions people search for.' },
+          { label: 'Not a redesign', detail: 'This adds to your existing website, it doesn\'t replace it. No rebuild required.' },
+        ],
+      },
+      {
+        name: 'What\'s Needed From You',
+        summary: 'Everything else is either already in place or free',
+        items: [
+          { label: 'A small hosting account (~$10–$20/mo)', status: 'pending', detail: 'Keeps the system running 24/7 rather than tied to one computer. Already on your original infrastructure list from June — not a new ask.' },
+          { label: 'An AI model account for the content engine', status: 'pending', detail: 'Free option available, or a small pay-as-you-go option — your call once we\'re ready to set it up.' },
+          { label: 'A Google account for lead capture', status: 'pending', detail: 'Free — used for a simple spreadsheet that logs new leads before they land in Momentum.' },
+          { label: 'Access to your website', status: 'pending', detail: 'So content can be added directly to what you already have.' },
+          { label: 'Everything else', detail: 'Momentum AMS (already connected), and free tools for tracking results (Google Search Console, Bing\'s AI visibility panel) — nothing further needed.' },
+        ],
+      },
+      {
+        name: 'Proposed Phases',
+        summary: 'A phased rollout, not a single big launch',
+        items: [
+          { label: 'Phase 1 — Foundation (Weeks 1–6)', status: 'pending', detail: 'Add your credentials (license numbers, years established, etc.) to your site in a format AI tools can actually read. Confirm site speed and mobile setup. Get the content system running and tested before it does anything client-facing.' },
+          { label: 'Phase 2 — Content Production (Weeks 6–18, ongoing after)', status: 'pending', detail: 'The system starts publishing real, useful answers to real questions people ask — the kind of content Joey\'s system produced, direct and specific to your lines of business. No thin or duplicate pages, ever — the same rule that made Joey\'s version work.' },
+          { label: 'Phase 3/4 — Authority + Ongoing Monitoring', status: 'pending', detail: 'Not a one-time launch — content stays fresh and we track real results (which AI tools are citing you, and whether it\'s turning into real leads) on an ongoing basis.' },
+        ],
+      },
+      {
+        name: 'Honest Timeline — Set Right From the Start',
+        summary: 'This is a patience-required system, same as Joey\'s own experience',
+        items: [
+          { label: 'First results', detail: 'Typically month 3–4 for the first AI citations — not immediate.' },
+          { label: 'Meaningful visibility', detail: 'Typically month 6–9.' },
+          { label: 'Stable, compounding presence', detail: 'Typically month 9–12, with results continuing to build from there rather than plateauing.' },
         ],
       },
     ],
