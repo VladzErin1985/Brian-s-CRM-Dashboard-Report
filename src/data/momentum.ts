@@ -351,6 +351,14 @@ export const systemCards: SystemCard[] = [
           { label: 'Winter Prep Email', status: 'draft', detail: 'Content is written and ready, focused on winter freeze prep per your confirmation — pipe insulation, heating system checks, shutting off exterior water valves. Meant to go out once a year, in early-to-mid November, as a bulk send rather than a triggered automation.' },
         ],
       },
+      {
+        name: 'Active Client Care — Life-Event Check-In',
+        summary: 'Built and correctly scoped — ready to activate whenever you are',
+        items: [
+          { label: 'Trigger', status: 'draft', detail: 'Momentum has no direct signal for a client mentioning a life event (marriage, new baby, new home, etc.), so this fires off a dedicated task category — when your team logs a "Life Event" task on a client, the check-in email goes out automatically the next day.' },
+          { label: 'Check-In Email', status: 'draft', detail: 'A warm, no-pressure note asking to revisit their coverage after a life milestone — no sales content.' },
+        ],
+      },
     ],
   },
   {
@@ -427,7 +435,7 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Phase 4 — Active Client Care',
-        summary: '9 touchpoints total, 5 of 9 built as automations, 1 content-ready as a manual send — no texting required',
+        summary: '9 touchpoints total, 6 of 9 built as automations, 1 content-ready as a manual send — no texting required',
         items: [
           { label: 'Birthday message', status: 'draft', detail: 'Built and ready to activate — see the Automations section above for full detail.' },
           { label: 'Claims Follow-Up message', status: 'draft', detail: 'Built for your 3 most common claim types (Automobile Loss, Property Loss, General Liability) — see the Automations section above for full detail.' },
@@ -435,7 +443,8 @@ export const systemCards: SystemCard[] = [
           { label: 'Referral opportunity', status: 'draft', detail: 'Built and ready to activate — see the Automations section above for full detail.' },
           { label: 'Policy change tracking', status: 'draft', detail: 'Built for your 3 most common request types (General, General New, Policy Change Request - Other) — see the Automations section above for full detail.' },
           { label: 'Seasonal safety email', status: 'draft', detail: 'Content is written and ready (winter freeze prep, per your confirmation), but Momentum has no way to trigger a message on a shared calendar date across your whole client list — every trigger is tied to an individual record’s own date, not a fixed date. This one will need to go out as a yearly manual bulk send instead of an automation.' },
-          { label: 'Remaining 3 touchpoints', status: 'pending', detail: 'Life-event check-in, cross-sell opportunity, and annual coverage review — not yet built.' },
+          { label: 'Life-event check-in', status: 'draft', detail: 'Built and ready to activate, triggered off a dedicated task category your team logs when a client mentions a life event — see the Automations section above for full detail.' },
+          { label: 'Remaining 2 touchpoints', status: 'pending', detail: 'Cross-sell opportunity and annual coverage review — not yet built.' },
         ],
       },
       {
