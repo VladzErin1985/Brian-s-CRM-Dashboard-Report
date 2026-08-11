@@ -367,6 +367,22 @@ export const systemCards: SystemCard[] = [
           { label: 'Coverage Check Email', status: 'live', detail: 'A warm, low-pressure note inviting a full coverage review. Found and fixed a real accuracy issue: it used to name a specific line of business as the assumed gap for every client, which wasn\'t true for everyone — reworded to be accurate regardless of what a client actually has or is missing.' },
         ],
       },
+      {
+        name: 'Claims Pipeline — Reported',
+        summary: 'Built and correctly scoped — ready to activate whenever you are',
+        items: [
+          { label: 'Trigger', status: 'draft', detail: 'Fires the day after a new task is logged in your Claim category — this is your team\'s real signal that a client has reported a claim.' },
+          { label: 'Claim Received Email', status: 'draft', detail: 'A warm, reassuring note letting the client know their claim is in hand and explaining what happens next — no sales content.' },
+        ],
+      },
+      {
+        name: 'Claims Pipeline — Closed',
+        summary: 'Built and correctly scoped — ready to activate whenever you are',
+        items: [
+          { label: 'Trigger', status: 'draft', detail: 'Fires when a claim task\'s status is marked Closed.' },
+          { label: 'Claim Closed Email', status: 'draft', detail: 'A short, appreciative note letting the client know their claim has been resolved, with the door left open for follow-up questions — no sales content.' },
+        ],
+      },
     ],
   },
   {
@@ -466,7 +482,7 @@ export const systemCards: SystemCard[] = [
         name: 'Phase 6 — Long-Term Vision',
         summary: 'From your own stated goals, further out — one item below needs your input',
         items: [
-          { label: 'Claims Pipeline Automation', status: 'pending', detail: 'Automating the 7-stage claims process.' },
+          { label: 'Claims Pipeline Automation', status: 'draft', detail: 'Checked what Momentum can actually automate across your documented 7-stage claims process, it can only reliably distinguish 2 of those moments (a claim being reported, and a claim being closed), not all 7, since the platform has no way to tell the 5 stages in between apart from each other. Built both real ones, see the Automations section above. The remaining 5 stages (Carrier Assigned, Adjuster Assigned, Client Check-In, 30-Day Follow-Up, Satisfaction Follow-Up) stay manual/internal tasks for your team, not automatable as-is.' },
           { label: 'Referral Partner Pipeline — Needs Your Review', status: 'pending', detail: 'Worth flagging directly: you told us this is one of your highest priorities, but your written plan places it here, in the long-term phase. We followed the written plan for this draft, but wanted to check with you directly — should this move up into an earlier phase, or has the priority shifted since you wrote that? Let us know either way.' },
           { label: 'Marketing & Commercial Risk Management Pipelines', status: 'pending', detail: 'The remaining two pipelines from your long-term vision.' },
           { label: 'Marketing Content Support', status: 'pending', detail: 'Getting your marketing assistant fully set up to create branded video content at scale.' },
