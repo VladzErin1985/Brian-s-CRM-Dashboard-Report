@@ -383,6 +383,46 @@ export const systemCards: SystemCard[] = [
           { label: 'Claim Closed Email', status: 'draft', detail: 'A short, appreciative note letting the client know their claim has been resolved, with the door left open for follow-up questions — no sales content.' },
         ],
       },
+      {
+        name: 'Claims Pipeline — Carrier Assigned',
+        summary: 'Planned — building this next',
+        items: [
+          { label: 'Trigger', status: 'pending', detail: 'Will fire off a dedicated task category your team logs when a carrier is assigned to a claim — same category-based method already working for Life-Event Check-In.' },
+          { label: 'Carrier Assigned Email', status: 'pending', detail: 'A short note letting the client know their claim is now with a carrier and is being actively handled — no sales content.' },
+        ],
+      },
+      {
+        name: 'Claims Pipeline — Adjuster Assigned',
+        summary: 'Planned — building this next',
+        items: [
+          { label: 'Trigger', status: 'pending', detail: 'Will fire off a dedicated task category your team logs when an adjuster is assigned to a claim.' },
+          { label: 'Adjuster Assigned Email', status: 'pending', detail: 'A reassuring note letting the client know an adjuster is now on their claim, with next-steps framing — no sales content.' },
+        ],
+      },
+      {
+        name: 'Claims Pipeline — Client Check-In',
+        summary: 'Planned — building this next',
+        items: [
+          { label: 'Trigger', status: 'pending', detail: 'Will fire off a dedicated task category your team logs mid-process, while a claim is still active.' },
+          { label: 'Check-In Email', status: 'pending', detail: 'A brief mid-process note asking how things are going and leaving the door open for questions — no sales content.' },
+        ],
+      },
+      {
+        name: 'Claims Pipeline — 30-Day Follow-Up',
+        summary: 'Planned — building this next',
+        items: [
+          { label: 'Trigger', status: 'pending', detail: 'Will fire off a dedicated task category your team logs 30 days into a claim that\'s still open.' },
+          { label: 'Follow-Up Email', status: 'pending', detail: 'A short check-in confirming the claim is still being actively worked and the client hasn\'t been forgotten — no sales content.' },
+        ],
+      },
+      {
+        name: 'Claims Pipeline — Satisfaction Follow-Up',
+        summary: 'Planned — building this next',
+        items: [
+          { label: 'Trigger', status: 'pending', detail: 'Will fire off a dedicated task category your team logs once a claim is closed and enough time has passed to ask how it went.' },
+          { label: 'Satisfaction Email', status: 'pending', detail: 'A short "how did we do" note checking in on the client\'s experience with the claims process — kept separate from the onboarding review request, no sales content.' },
+        ],
+      },
     ],
   },
   {
