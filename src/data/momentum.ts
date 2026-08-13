@@ -467,6 +467,44 @@ export const systemCards: SystemCard[] = [
     ],
   },
   {
+    id: 'feature-map',
+    title: 'What Momentum Can Still Do — New Automation Candidates, For Your Review',
+    tagline: 'A closer look at what your Momentum account already offers that isn\'t being used yet — real opportunities to expand automation further',
+    icon: 'zap',
+    lanes: [
+      {
+        name: 'Policy Endorsements — Not Yet Automated',
+        summary: 'A real gap found: an endorsement going through has no client touchpoint today',
+        items: [
+          { label: 'What was found', status: 'pending', detail: 'Policy Change Tracking (already live) covers requests a client submits, but doesn\'t cover an actual endorsement once it\'s processed on a policy. Right now, nothing lets a client know once that change has actually gone through.' },
+          { label: 'What this could look like', status: 'pending', detail: 'A short, no-sales confirmation email the moment an endorsement completes on a policy — same pattern already used everywhere else on this dashboard.' },
+        ],
+      },
+      {
+        name: 'Pre-Built Cross-Sell Templates — Never Reviewed',
+        summary: 'Momentum ships ready-made cross-sell workflows sitting unused in your account',
+        items: [
+          { label: 'What was found', status: 'pending', detail: 'Your account already includes 6 pre-built cross-sell templates — Term Life, Umbrella, Auto, Earthquake, Flood, and Home — that have never been reviewed or turned on. These could be a faster starting point than building new cross-sell automations from scratch.' },
+          { label: 'Why it matters', status: 'pending', detail: 'Your account carries a very wide range of coverage types, and only a small number currently have any cross-sell automation touching them at all. These templates are a ready-made way to close that gap faster than a from-scratch build.' },
+        ],
+      },
+      {
+        name: 'Document Signing — Not Yet Connected to Automation',
+        summary: 'A signature-completion trigger exists in Momentum but has never been used',
+        items: [
+          { label: 'What was found', status: 'pending', detail: 'Momentum has a trigger for when a document is signed that isn\'t wired into any workflow yet — a natural fit for a signed-document confirmation or next-step automation.' },
+        ],
+      },
+      {
+        name: 'Service Center Tickets — Same Proven Pattern, Quick to Add',
+        summary: 'A quick win using the exact acknowledgment approach already live elsewhere',
+        items: [
+          { label: 'What was found', status: 'pending', detail: 'Support tickets logged in Momentum have their own dedicated trigger, separate from service requests, that isn\'t automated yet. The same acknowledgment-email approach already live on Policy Change Tracking could apply here with very little new design work.' },
+        ],
+      },
+    ],
+  },
+  {
     id: 'roadmap',
     title: 'Proposed Roadmap — For Your Review',
     tagline: 'Based on your own documents, pipelines, and stated priorities. This is a draft, not final — let us know what needs adjusting.',
