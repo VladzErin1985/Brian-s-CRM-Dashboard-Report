@@ -385,42 +385,42 @@ export const systemCards: SystemCard[] = [
       },
       {
         name: 'Claims Pipeline — Carrier Assigned',
-        summary: 'Planned — building this next',
+        summary: 'Built and correctly scoped — ready to activate whenever you are',
         items: [
-          { label: 'Trigger', status: 'pending', detail: 'Will fire off a dedicated task category your team logs when a carrier is assigned to a claim — same category-based method already working for Life-Event Check-In.' },
-          { label: 'Carrier Assigned Email', status: 'pending', detail: 'A short note letting the client know their claim is now with a carrier and is being actively handled — no sales content.' },
+          { label: 'Trigger', status: 'draft', detail: 'Fires off a dedicated task category your team logs when a carrier is assigned to a claim — same category-based method already working for Life-Event Check-In.' },
+          { label: 'Carrier Assigned Email', status: 'draft', detail: 'A short note letting the client know their claim is now with a carrier and is being actively handled — no sales content.' },
         ],
       },
       {
         name: 'Claims Pipeline — Adjuster Assigned',
-        summary: 'Planned — building this next',
+        summary: 'Built and correctly scoped — ready to activate whenever you are',
         items: [
-          { label: 'Trigger', status: 'pending', detail: 'Will fire off a dedicated task category your team logs when an adjuster is assigned to a claim.' },
-          { label: 'Adjuster Assigned Email', status: 'pending', detail: 'A reassuring note letting the client know an adjuster is now on their claim, with next-steps framing — no sales content.' },
+          { label: 'Trigger', status: 'draft', detail: 'Fires off a dedicated task category your team logs when an adjuster is assigned to a claim.' },
+          { label: 'Adjuster Assigned Email', status: 'draft', detail: 'A reassuring note letting the client know an adjuster is now on their claim, with next-steps framing — no sales content.' },
         ],
       },
       {
         name: 'Claims Pipeline — Client Check-In',
-        summary: 'Planned — building this next',
+        summary: 'Built and correctly scoped — ready to activate whenever you are',
         items: [
-          { label: 'Trigger', status: 'pending', detail: 'Will fire off a dedicated task category your team logs mid-process, while a claim is still active.' },
-          { label: 'Check-In Email', status: 'pending', detail: 'A brief mid-process note asking how things are going and leaving the door open for questions — no sales content.' },
+          { label: 'Trigger', status: 'draft', detail: 'Fires off a dedicated task category your team logs mid-process, while a claim is still active.' },
+          { label: 'Check-In Email', status: 'draft', detail: 'A brief mid-process note asking how things are going and leaving the door open for questions — no sales content.' },
         ],
       },
       {
         name: 'Claims Pipeline — 30-Day Follow-Up',
-        summary: 'Planned — building this next',
+        summary: 'Built and correctly scoped — ready to activate whenever you are',
         items: [
-          { label: 'Trigger', status: 'pending', detail: 'Will fire off a dedicated task category your team logs 30 days into a claim that\'s still open.' },
-          { label: 'Follow-Up Email', status: 'pending', detail: 'A short check-in confirming the claim is still being actively worked and the client hasn\'t been forgotten — no sales content.' },
+          { label: 'Trigger', status: 'draft', detail: 'Fires off a dedicated task category your team logs 30 days into a claim that\'s still open.' },
+          { label: 'Follow-Up Email', status: 'draft', detail: 'A short check-in confirming the claim is still being actively worked and the client hasn\'t been forgotten — no sales content.' },
         ],
       },
       {
         name: 'Claims Pipeline — Satisfaction Follow-Up',
-        summary: 'Planned — building this next',
+        summary: 'Built and correctly scoped — ready to activate whenever you are',
         items: [
-          { label: 'Trigger', status: 'pending', detail: 'Will fire off a dedicated task category your team logs once a claim is closed and enough time has passed to ask how it went.' },
-          { label: 'Satisfaction Email', status: 'pending', detail: 'A short "how did we do" note checking in on the client\'s experience with the claims process — kept separate from the onboarding review request, no sales content.' },
+          { label: 'Trigger', status: 'draft', detail: 'Fires off a dedicated task category your team logs once a claim is closed and enough time has passed to ask how it went.' },
+          { label: 'Satisfaction Email', status: 'draft', detail: 'A short "how did we do" note checking in on the client\'s experience with the claims process — kept separate from the onboarding review request, no sales content.' },
         ],
       },
     ],
@@ -560,7 +560,7 @@ export const systemCards: SystemCard[] = [
         name: 'Phase 6 — Long-Term Vision',
         summary: 'From your own stated goals, further out — one item below needs your input',
         items: [
-          { label: 'Claims Pipeline Automation', status: 'pending', detail: 'Checked what Momentum can actually automate across your documented 7-stage claims process — at first it could only reliably distinguish 2 of those moments (a claim being reported, and a claim being closed), since the platform has no native way to tell the 5 stages in between apart. Both of those are built, see the Automations section above. Since then, found a real way to close the rest of the gap: creating a dedicated task category for each remaining stage (Carrier Assigned, Adjuster Assigned, Client Check-In, 30-Day Follow-Up, Satisfaction Follow-Up) so each one can trigger its own automation, the same method already working for the Life-Event Check-In automation. Building these out next.' },
+          { label: 'Claims Pipeline Automation', status: 'draft', detail: 'Checked what Momentum can actually automate across your documented 7-stage claims process — at first it could only reliably distinguish 2 of those moments (a claim being reported, and a claim being closed), since the platform has no native way to tell the 5 stages in between apart. Closed the rest of the gap by creating a dedicated task category for each remaining stage (Carrier Assigned, Adjuster Assigned, Client Check-In, 30-Day Follow-Up, Satisfaction Follow-Up) so each one triggers its own automation, the same method already working for the Life-Event Check-In automation. All 7 stages are now built, see the Automations section above — ready to activate whenever you are.' },
           { label: 'Referral Partner Pipeline — Needs Your Review', status: 'pending', detail: 'Worth flagging directly: you told us this is one of your highest priorities, but your written plan places it here, in the long-term phase. We followed the written plan for this draft, but wanted to check with you directly — should this move up into an earlier phase, or has the priority shifted since you wrote that? Let us know either way.' },
           { label: 'Marketing & Commercial Risk Management Pipelines', status: 'pending', detail: 'The remaining two pipelines from your long-term vision.' },
           { label: 'Marketing Content Support', status: 'pending', detail: 'Getting your marketing assistant fully set up to create branded video content at scale. Worth knowing this connects directly to the AI Lead-Gen project below — YouTube mentions are one of the strongest real signals AI tools use to decide what to cite, so this isn\'t just a marketing nice-to-have, it feeds the same visibility goal.' },
