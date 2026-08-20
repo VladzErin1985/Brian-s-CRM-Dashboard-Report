@@ -502,6 +502,15 @@ export const systemCards: SystemCard[] = [
           { label: 'What was found', status: 'pending', detail: 'Support tickets logged in Momentum have their own dedicated trigger, separate from service requests, that isn\'t automated yet. The same acknowledgment-email approach already live on Policy Change Tracking could apply here with very little new design work.' },
         ],
       },
+      {
+        name: 'Round Robin Task Assignment — Future, Once the Team Grows',
+        summary: 'A real feature already in your account, just not useful yet with a team of one',
+        items: [
+          { label: 'What was found', status: 'pending', detail: 'Momentum has a built-in way to automatically rotate incoming tasks across multiple staff members instead of assigning them all to one person.' },
+          { label: 'Why it\'s not being built now', status: 'pending', detail: 'Right now it\'s just you in the system — rotation only matters once there\'s more than one person to rotate across. Not worth setting up before then.' },
+          { label: 'When to revisit', status: 'pending', detail: 'The moment a VA or another agent joins the team, this becomes worth turning on. Flagging it now so it\'s not forgotten later.' },
+        ],
+      },
     ],
   },
   {
