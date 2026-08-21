@@ -481,12 +481,12 @@ export const systemCards: SystemCard[] = [
         ],
       },
       {
-        name: 'Pre-Built Cross-Sell Templates — Never Reviewed',
-        summary: 'Momentum ships ready-made cross-sell workflows sitting unused in your account',
+        name: 'Pre-Built Cross-Sell Templates — 1 of 6 Reviewed and Built',
+        summary: 'Momentum ships ready-made cross-sell workflows — first one adapted and ready for your review',
         items: [
-          { label: 'What was found', status: 'pending', detail: 'Your account already includes 6 pre-built cross-sell templates — Term Life, Umbrella, Auto, Earthquake, Flood, and Home — that have never been reviewed or turned on. These could be a faster starting point than building new cross-sell automations from scratch.' },
-          { label: 'Why it matters', status: 'pending', detail: 'Your account carries a very wide range of coverage types, and only a small number currently have any cross-sell automation touching them at all. These templates are a ready-made way to close that gap faster than a from-scratch build.' },
-          { label: 'One new line spotted', status: 'pending', detail: 'A "Garage & Dealers Policy" line was added to your account this month. Like most of your coverage types, nothing currently reaches out about it — worth keeping in mind once cross-sell templates are reviewed.' },
+          { label: 'Earthquake Cross-Sell — built', status: 'draft', detail: 'Checked against your own site first, Missouri sits in a real earthquake zone and you already market this coverage, so this one\'s genuinely relevant, not a generic template. Rewrote all 6 messages in it to match the same plain, no-pressure tone as everything else we\'ve built. One open question for you: it\'s set to reach out about 3 months before your annual review touchpoint, worth confirming that timing feels right before it ever goes live.' },
+          { label: '5 remaining', status: 'pending', detail: 'Term Life, Umbrella, Auto, Flood, and Home Cross-Sell are still sitting unused, same ready-made starting point as Earthquake.' },
+          { label: 'One new line spotted', status: 'pending', detail: 'A "Garage & Dealers Policy" line was added to your account this month. Like most of your coverage types, nothing currently reaches out about it — worth keeping in mind once the remaining cross-sell templates are reviewed.' },
         ],
       },
       {
