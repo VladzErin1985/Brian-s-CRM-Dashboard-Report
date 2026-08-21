@@ -486,6 +486,7 @@ export const systemCards: SystemCard[] = [
         items: [
           { label: 'What was found', status: 'pending', detail: 'Your account already includes 6 pre-built cross-sell templates — Term Life, Umbrella, Auto, Earthquake, Flood, and Home — that have never been reviewed or turned on. These could be a faster starting point than building new cross-sell automations from scratch.' },
           { label: 'Why it matters', status: 'pending', detail: 'Your account carries a very wide range of coverage types, and only a small number currently have any cross-sell automation touching them at all. These templates are a ready-made way to close that gap faster than a from-scratch build.' },
+          { label: 'One new line spotted', status: 'pending', detail: 'A "Garage & Dealers Policy" line was added to your account this month. Like most of your coverage types, nothing currently reaches out about it — worth keeping in mind once cross-sell templates are reviewed.' },
         ],
       },
       {
@@ -496,10 +497,20 @@ export const systemCards: SystemCard[] = [
         ],
       },
       {
-        name: 'Service Center Tickets — Same Proven Pattern, Quick to Add',
-        summary: 'A quick win using the exact acknowledgment approach already live elsewhere',
+        name: 'Service Center Tickets — Built',
+        summary: 'The first of these four picked up and built',
         items: [
-          { label: 'What was found', status: 'pending', detail: 'Support tickets logged in Momentum have their own dedicated trigger, separate from service requests, that isn\'t automated yet. The same acknowledgment-email approach already live on Policy Change Tracking could apply here with very little new design work.' },
+          { label: 'Ticket Received Acknowledgment', status: 'draft', detail: 'Fires the moment a ticket is logged. Sends a quick acknowledgment email using the same tone as the rest of your automation, so a client knows their ticket landed before anyone gets to it. Built and correctly scoped — ready to activate whenever you are.' },
+        ],
+      },
+      {
+        name: 'Referral Partner Automation — Mapped Against Your Own Priority List',
+        summary: 'You told us this was your highest priority. Here\'s what we found when we checked it against what Momentum can actually do',
+        items: [
+          { label: 'Most of your list is buildable today', status: 'pending', detail: 'We went back through the full feature list from your own July packet — scheduled check-ins, birthday and anniversary reminders, thank-you messages, quarterly reviews, no-contact alerts, and the rest — and checked each one against what\'s already proven working elsewhere in your account. Most of it maps directly to patterns we\'ve already built and tested.' },
+          { label: 'The no-contact alert already exists', status: 'draft', detail: 'The workflow that\'s supposed to flag a partner who hasn\'t been contacted in 45 days is already built and sitting ready. It just doesn\'t have any real partner records to check against yet.' },
+          { label: 'The real blocker is the partner list, not the build', status: 'pending', detail: 'The 15-partner list you sent us in August is still on hold pending your review, per your own instruction. Once that\'s reviewed and cleared, most of this priority can move quickly since the underlying pieces are already in place.' },
+          { label: 'Two small genuine gaps', status: 'pending', detail: 'Work-anniversary reminders and tracking referral activity/engagement over time would need two new fields added to your partner records that don\'t exist yet — a small, real piece of new setup, not a blocker on everything else.' },
         ],
       },
       {
